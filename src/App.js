@@ -31,11 +31,11 @@ class App extends Component {
   }
 
   handleChange = (event) => {
-    this.setState({ username: event.target.value });
+    this.setState({ inputText: event.target.value });
   }
 
   handleSave = () => {
-    const newUser = String(this.state.username);
+    const newUser = String(this.state.inputText);
     document.cookie = `username =${newUser}`;
     this.setState({text: this.state.inputText, mode: 'view'});
   }
